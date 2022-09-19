@@ -1,0 +1,9 @@
+﻿<Application x:Class="Tortuga_Bezrukov.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Tortuga_Bezrukov"
+             StartupUri="Windows\MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
