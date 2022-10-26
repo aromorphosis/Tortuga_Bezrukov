@@ -23,5 +23,14 @@ namespace Tortuga_Bezrukov.Windows
         {
             InitializeComponent();
         }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Backet backet = new Backet();
+            backet.ShowDialog();
+            this.Close();
+        }
     }
+    
 }

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Tortuga_Bezrukov.EF;
 
 namespace Tortuga_Bezrukov.Windows
 {
@@ -22,6 +23,39 @@ namespace Tortuga_Bezrukov.Windows
         public Beverages()
         {
             InitializeComponent();
+            AllBeverages.ItemsSource = ClassHelper.Class1.context.Beverage.ToList();
+        }
+
+        private void BtnBakery_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Bakery bakery = new Bakery();
+            bakery.ShowDialog();
+            this.Close();
+        }
+
+        private void BtnSalads_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Salads salads = new Salads();
+            salads.ShowDialog();
+            this.Close();
+        }
+
+        private void BtnDishes_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Dishes dishes = new Dishes();
+            dishes.ShowDialog();
+            this.Close();
+        }
+
+        private void BtnBacket_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Backet backet = new Backet();
+            backet.ShowDialog();
+            this.Close();
         }
     }
 }

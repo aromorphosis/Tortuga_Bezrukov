@@ -5,8 +5,116 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tortuga_Bezrukov.Windows"
         mc:Ignorable="d"
-        Title="Окно оплаты" Height="450" Width="800">
+        Title="Окно оплаты" Height="720" Width="720" WindowStartupLocation="CenterScreen">
     <Grid>
         
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.4*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.2*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.ColumnSpan="4" Background="#FF557A95">
+
+            <Image Source="/Images/Штурвал.png"
+                   Height="100"
+                   Width="100"
+                   Margin="120 0 0 0"/>
+
+            <TextBlock
+                Text="Tortuga"
+                Height="100"
+                Width="355"
+                FontSize="80" 
+                FontFamily="Algerian"
+                Margin="10 0 0 0"/>
+            
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical"
+                    Grid.Column="5"
+                    Grid.Row="1"
+                    Background="#FF7395AE"
+                    Grid.RowSpan="5">
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Background="#FF7395AE"
+                    Grid.RowSpan="5">
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Background="#FFEED8C6"
+                    Grid.RowSpan="3"
+                    Grid.ColumnSpan="2">
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Background="#FFEED8C6"
+                    Grid.RowSpan="4"
+                    Grid.ColumnSpan="2">
+
+            <TextBlock
+                Text="▶ Выберите способ оплаты"
+                FontSize="20" 
+                FontFamily="Comic Sans MS"
+                Height="25"
+                Width="280"
+                Margin="30 0 0 55"
+                />
+
+            <ComboBox 
+                Height="45"
+                Width="220"
+                Margin="10 5 0 55"/>
+
+            <Button 
+                    x:Name="BackBtn"
+                    Content="◃ Назад"
+                    FontSize="15" 
+                    FontFamily="Comic Sans MS"
+                    Width="100"
+                    Height="50"
+                    Foreground="#FF557A95"
+                    Margin="-925 55 0 0" 
+                    BorderBrush="{x:Null}"
+                    Background="{x:Null}"
+                    FontWeight ="ExtraBold"
+                    Click="BackBtn_Click"
+                    />
+
+            <Button 
+                    x:Name="PayBtn"
+                    Content="Оплатить ▹"
+                    FontSize="15" 
+                    FontFamily="Comic Sans MS"
+                    Width="100"
+                    Height="50"
+                    Foreground="#FF557A95"
+                    Margin="-65 55 0 0" 
+                    BorderBrush="{x:Null}"
+                    Background="{x:Null}"
+                    FontWeight ="ExtraBold"
+                    />
+
+        </StackPanel>
+
     </Grid>
 </Window>

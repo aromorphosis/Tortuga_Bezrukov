@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tortuga_Bezrukov"
         mc:Ignorable="d"
-        Title="Стартовая страница / главное окно" Height="720" Width="1280">
+        Title="Стартовая страница / главное окно" Height="720" Width="1280" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.4*"/>
@@ -21,6 +21,136 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="0.2*"/>
         </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.ColumnSpan="4" Background="#FF557A95">
+
+            <Image Source="/Images/Стрелочка.png"
+                   Margin="70 0"/>
+
+            <Button
+                x:Name="BtnBakery"
+                Width="150"
+                Height="40"
+                Content="Выпечка"
+                Margin="15"
+                FontSize="25"
+                FontFamily="Comic Sans MS"
+                Foreground="White"
+                BorderBrush="{x:Null}"
+                Background="{x:Null}"
+                Click="BtnBakery_Click"
+                />
+
+            <Button
+                x:Name="BtnBeverages"
+                Width="150"
+                Height="40"
+                Content="Напитки"
+                Margin="15"
+                FontSize="25"
+                FontFamily="Comic Sans MS"
+                Foreground="White"
+                BorderBrush="{x:Null}"
+                Background="{x:Null}"
+                Click="BtnBeverages_Click"
+                />
+
+            <Button
+                x:Name="BtnSalads"
+                Width="150"
+                Height="40"
+                Content="Салаты"
+                Margin="15"
+                FontSize="25"
+                FontFamily="Comic Sans MS"
+                Foreground="White"
+                BorderBrush="{x:Null}"
+                Background="{x:Null}"
+                Click="BtnSalads_Click"
+                />
+
+            <Button
+                x:Name="BtnDishes"
+                Width="150"
+                Height="40"
+                Content="Блюда"
+                Margin="15"
+                FontSize="25"
+                FontFamily="Comic Sans MS"
+                Foreground="White"
+                BorderBrush="{x:Null}"
+                Background="{x:Null}"
+                Click="BtnDishes_Click"
+                />
+
+            <Image Source="/Images/Корзина.png"
+                   Margin="50 0"
+                   />
+
+            <Button
+                x:Name="BtnBacket"
+                Height="90"
+                Width="110"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Margin="-180 5 80 10"
+                Click="BtnBacket_Click"
+                Opacity="0"
+                />
+            
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Background="#FF7395AE"
+                    Grid.RowSpan="5">
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Background="#FFEED8C6"
+                    Grid.RowSpan="4"
+                    Grid.ColumnSpan="2">
+
+            <Image Source="/Images/Штурвал.png"
+                   Height="400"
+                   Width="400"
+                   Margin="100 0 10 100"/>
+
+            <TextBlock
+                Text="Tortuga"
+                Height="130"
+                Width="450"
+                FontSize="100" 
+                FontFamily="Algerian"
+                Margin="10 10 10 250" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1"
+                    Grid.Row="1"
+                    Grid.RowSpan="4"
+                    Grid.ColumnSpan="2">
+
+            <TextBlock
+                Text="Добро пожаловать в кафе Тортуга, выберите нужную вам категорию и сделайте свой заказ!"
+                Height="170"
+                Width="350"
+                FontSize="30" 
+                FontFamily="Comic Sans MS"
+                TextWrapping="Wrap" 
+                Margin="500 230 100 10"
+                 />
+        </StackPanel>
         
+        <StackPanel Orientation="Vertical"
+                    Grid.Column="5"
+                    Grid.Row="1"
+                    Background="#FF7395AE"
+                    Grid.RowSpan="5">
+        </StackPanel>
+
     </Grid>
 </Window>

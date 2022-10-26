@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -19,9 +20,27 @@ namespace Tortuga_Bezrukov.Windows
     /// </summary>
     public partial class Backet : Window
     {
+
         public Backet()
         {
             InitializeComponent();
         }
+
+        private void PaymentBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Payment payment = new Payment();
+            payment.ShowDialog();
+            this.Close();
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Bakery bakery = new Bakery();
+            bakery.ShowDialog();
+            this.Close();
+        }
+
     }
 }
