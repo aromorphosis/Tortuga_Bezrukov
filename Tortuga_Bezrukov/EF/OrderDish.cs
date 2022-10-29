@@ -12,18 +12,14 @@ namespace Tortuga_Bezrukov.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class TypeDish
+    public partial class OrderDish
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TypeDish()
-        {
-            this.Dish = new HashSet<Dish>();
-        }
+        public int IdOrderDish { get; set; }
+        public int IdOrder { get; set; }
+        public int IdDish { get; set; }
+        public int Qty { get; set; }
     
-        public int ID { get; set; }
-        public string NameTypeDish { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Dish> Dish { get; set; }
+        public virtual Dish Dish { get; set; }
+        public virtual Order Order { get; set; }
     }
 }

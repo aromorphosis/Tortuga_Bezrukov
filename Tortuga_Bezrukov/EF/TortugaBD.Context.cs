@@ -15,10 +15,10 @@ namespace Tortuga_Bezrukov.EF
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class Tortuga : DbContext
+    public partial class TortugaC : DbContext
     {
-        public Tortuga()
-            : base("name=Tortuga")
+        public TortugaC()
+            : base("name=TortugaC")
         {
         }
     
@@ -27,14 +27,14 @@ namespace Tortuga_Bezrukov.EF
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Bakery> Bakery { get; set; }
-        public virtual DbSet<Beverage> Beverage { get; set; }
+        public virtual DbSet<Booking> Booking { get; set; }
+        public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Dish> Dish { get; set; }
         public virtual DbSet<Order> Order { get; set; }
-        public virtual DbSet<Salad> Salad { get; set; }
+        public virtual DbSet<OrderDish> OrderDish { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Table> Table { get; set; }
-        public virtual DbSet<TypeDish> TypeDish { get; set; }
+        public virtual DbSet<ImageDish> ImageDish { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

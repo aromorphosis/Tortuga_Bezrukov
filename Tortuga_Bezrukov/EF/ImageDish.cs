@@ -12,21 +12,9 @@ namespace Tortuga_Bezrukov.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class Salad
+    public partial class ImageDish
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Salad()
-        {
-            this.Order = new HashSet<Order>();
-        }
-    
-        public int ID { get; set; }
-        public string NameSalad { get; set; }
-        public decimal Cost { get; set; }
-        public string Compound { get; set; }
-        public string Сalorie { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Order { get; set; }
+        public int IdDish { get; set; }
+        public string Id { get; set; }
     }
 }

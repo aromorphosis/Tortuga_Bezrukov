@@ -25,7 +25,8 @@ namespace Tortuga_Bezrukov.Windows
         public Bakery()
         {
             InitializeComponent();
-            AllBakery.ItemsSource = ClassHelper.Class1.context.Bakery.ToList();
+            AllBakery.ItemsSource = context.Dish.Where(i => i.IdCategory == 5).ToList();
+
         }
 
         private void BtnBeverages_Click(object sender, RoutedEventArgs e)

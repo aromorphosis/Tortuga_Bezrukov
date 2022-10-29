@@ -180,7 +180,7 @@
                                         FontFamily="Comic Sans MS"/>
 
 
-                                <TextBlock Text="{Binding Path = NameBakery}"
+                                <TextBlock Text="{Binding Path = Title}"
                                         Grid.Column="1"
                                         Grid.Row="0"
                                         Margin="10 10 10 10"
@@ -196,13 +196,34 @@
                                         Foreground="White"
                                         FontFamily="Comic Sans MS"/>
 
-                                <TextBlock Text="{Binding Path = Сalorie}"
+                                <TextBlock Text="{Binding Path = Weight}"
                                         Grid.Column="1"
                                         Grid.Row="2"
                                         Margin="10 10 10 10"
                                         FontSize="15"
                                         Foreground="White"
                                         FontFamily="Comic Sans MS"/>
+
+                                <Button
+                                x:Name="btnOrder"
+                                Grid.Column="1"
+                                Grid.Row="1"
+                                Content="Заказать"
+                                Margin="10 5"
+                                Height="30"
+                                Width="50"
+                                FontSize="10"
+                                Foreground="White"
+                                VerticalContentAlignment="Center"
+                                HorizontalAlignment="Right" Background="#FF557A95"
+                            >
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="15"/>
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
+
                             </Grid>
                         </Border>
                     </DataTemplate>

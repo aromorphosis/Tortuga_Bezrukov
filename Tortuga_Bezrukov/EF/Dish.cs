@@ -17,18 +17,19 @@ namespace Tortuga_Bezrukov.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Dish()
         {
-            this.Order = new HashSet<Order>();
+            this.OrderDish = new HashSet<OrderDish>();
         }
     
-        public int ID { get; set; }
-        public string NameDish { get; set; }
+        public int IdDish { get; set; }
+        public string Title { get; set; }
         public decimal Cost { get; set; }
-        public string Compound { get; set; }
-        public string Сalorie { get; set; }
-        public int IDTypeDish { get; set; }
+        public Nullable<double> Weight { get; set; }
+        public string Description { get; set; }
+        public int IdCategory { get; set; }
+        public string ImagePath { get; set; }
     
-        public virtual TypeDish TypeDish { get; set; }
+        public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual ICollection<OrderDish> OrderDish { get; set; }
     }
 }

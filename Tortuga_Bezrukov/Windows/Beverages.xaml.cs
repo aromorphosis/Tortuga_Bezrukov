@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Tortuga_Bezrukov.EF;
+using static Tortuga_Bezrukov.ClassHelper.Class1;
 
 namespace Tortuga_Bezrukov.Windows
 {
@@ -23,7 +24,8 @@ namespace Tortuga_Bezrukov.Windows
         public Beverages()
         {
             InitializeComponent();
-            AllBeverages.ItemsSource = ClassHelper.Class1.context.Beverage.ToList();
+            AllBeverages.ItemsSource = context.Dish.Where(i => i.IdCategory == 6).ToList();
+
         }
 
         private void BtnBakery_Click(object sender, RoutedEventArgs e)

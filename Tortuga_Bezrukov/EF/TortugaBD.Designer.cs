@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\79044\source\repos\Tortuga_Bezrukov\Tortuga_Bezrukov\EF\TortugaDB.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\79044\source\repos\Tortuga_Bezrukov\Tortuga_Bezrukov\EF\TortugaBD.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

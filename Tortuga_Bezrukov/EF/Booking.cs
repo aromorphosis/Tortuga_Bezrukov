@@ -12,21 +12,12 @@ namespace Tortuga_Bezrukov.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class Beverage
+    public partial class Booking
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Beverage()
-        {
-            this.Order = new HashSet<Order>();
-        }
+        public int IdBooking { get; set; }
+        public int IdTable { get; set; }
+        public System.DateTime DataBooking { get; set; }
     
-        public int ID { get; set; }
-        public string NameBeverage { get; set; }
-        public decimal Cost { get; set; }
-        public string Compound { get; set; }
-        public string Сalorie { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual Table Table { get; set; }
     }
 }

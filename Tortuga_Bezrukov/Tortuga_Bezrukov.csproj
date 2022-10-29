@@ -44,6 +44,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.JScript" />
     <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -68,51 +69,52 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClassHelper\Backet1.cs" />
     <Compile Include="ClassHelper\Class1.cs" />
-    <Compile Include="EF\Bakery.cs">
-      <DependentUpon>TortugaDB.tt</DependentUpon>
+    <Compile Include="EF\Booking.cs">
+      <DependentUpon>TortugaBD.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\Beverage.cs">
-      <DependentUpon>TortugaDB.tt</DependentUpon>
+    <Compile Include="EF\Category.cs">
+      <DependentUpon>TortugaBD.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Dish.cs">
-      <DependentUpon>TortugaDB.tt</DependentUpon>
+      <DependentUpon>TortugaBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\ImageDish.cs">
+      <DependentUpon>TortugaBD.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Order.cs">
-      <DependentUpon>TortugaDB.tt</DependentUpon>
+      <DependentUpon>TortugaBD.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\Salad.cs">
-      <DependentUpon>TortugaDB.tt</DependentUpon>
+    <Compile Include="EF\OrderDish.cs">
+      <DependentUpon>TortugaBD.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>TortugaDB.tt</DependentUpon>
+      <DependentUpon>TortugaBD.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\sp_helpdiagrams_Result.cs">
-      <DependentUpon>TortugaDB.tt</DependentUpon>
+      <DependentUpon>TortugaBD.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\sysdiagrams.cs">
-      <DependentUpon>TortugaDB.tt</DependentUpon>
+      <DependentUpon>TortugaBD.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Table.cs">
-      <DependentUpon>TortugaDB.tt</DependentUpon>
+      <DependentUpon>TortugaBD.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\TortugaDB.Context.cs">
+    <Compile Include="EF\TortugaBD.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TortugaDB.Context.tt</DependentUpon>
+      <DependentUpon>TortugaBD.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\TortugaDB.cs">
+    <Compile Include="EF\TortugaBD.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TortugaDB.tt</DependentUpon>
+      <DependentUpon>TortugaBD.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\TortugaDB.Designer.cs">
+    <Compile Include="EF\TortugaBD.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TortugaDB.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="EF\TypeDish.cs">
-      <DependentUpon>TortugaDB.tt</DependentUpon>
+      <DependentUpon>TortugaBD.edmx</DependentUpon>
     </Compile>
     <Compile Include="Windows\Backet.xaml.cs">
       <DependentUpon>Backet.xaml</DependentUpon>
@@ -201,12 +203,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="EF\TortugaDB.edmx">
+    <EntityDeploy Include="EF\TortugaBD.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TortugaDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>TortugaBD.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="EF\TortugaDB.edmx.diagram">
-      <DependentUpon>TortugaDB.edmx</DependentUpon>
+    <None Include="EF\TortugaBD.edmx.diagram">
+      <DependentUpon>TortugaBD.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -228,20 +230,22 @@
     <Resource Include="Images\Штурвал.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EF\TortugaDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TortugaDB.Context.cs</LastGenOutput>
-      <DependentUpon>TortugaDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="EF\TortugaDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TortugaDB.edmx</DependentUpon>
-      <LastGenOutput>TortugaDB.cs</LastGenOutput>
-    </Content>
     <Resource Include="Штурвал.ico" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EF\TortugaBD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TortugaBD.edmx</DependentUpon>
+      <LastGenOutput>TortugaBD.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EF\TortugaBD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TortugaBD.edmx</DependentUpon>
+      <LastGenOutput>TortugaBD.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

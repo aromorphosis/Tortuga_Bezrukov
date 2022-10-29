@@ -14,18 +14,19 @@ namespace Tortuga_Bezrukov.EF
     
     public partial class Order
     {
-        public int ID { get; set; }
-        public Nullable<int> IDBakery { get; set; }
-        public Nullable<int> IDBeverage { get; set; }
-        public Nullable<int> IDSalad { get; set; }
-        public Nullable<int> IDDish { get; set; }
-        public decimal FinalCost { get; set; }
-        public Nullable<int> IDTable { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Order()
+        {
+            this.OrderDish = new HashSet<OrderDish>();
+        }
     
-        public virtual Bakery Bakery { get; set; }
-        public virtual Beverage Beverage { get; set; }
-        public virtual Dish Dish { get; set; }
-        public virtual Salad Salad { get; set; }
+        public int IdOrder { get; set; }
+        public int IdTable { get; set; }
+        public System.DateTime DateOrder { get; set; }
+        public decimal FinishCost { get; set; }
+    
         public virtual Table Table { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderDish> OrderDish { get; set; }
     }
 }

@@ -59,7 +59,107 @@
                     Grid.Row="1"
                     Background="#FFEED8C6"
                     Grid.RowSpan="3"
-                    Grid.ColumnSpan="2"/>
+                    Grid.ColumnSpan="2">
+
+            <ListView Height="400" Width="550" Margin="23" 
+                      x:Name="lvOrder"
+                      Grid.Row="1"
+                      Background="Transparent">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                CornerRadius="20"
+                Height="50"
+                Width="100"
+                HorizontalAlignment="Center"
+                Margin="0 0"
+                Background="#FF7395AE" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="470"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="0.4*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border
+                        Grid.Column="0"
+                        Background="#FFD3D2E2"
+                        CornerRadius="10"
+                        Margin="19 5">
+                                    <TextBlock
+                            x:Name="tbTitle"
+                            Text="Суп томатный средиземноморский с морепродуктами"
+                            FontSize="16"
+                            VerticalAlignment="Center"
+                            Margin="14 0"/>
+                                </Border>
+                                <TextBlock
+                       x:Name="tbCost" 
+                        Grid.Column="2"
+                        Text="1000₽"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Margin="0 0 45 0"
+                        FontSize="24"/>
+                                <Border
+                        Grid.Column="1"
+                        Margin="20 5"
+                        CornerRadius="10"
+                        Background="#FFD3D2E2"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Button
+                                x:Name="btnPlus"
+                                Grid.Column="0"
+                                 VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                BorderBrush="{x:Null}"
+                                Foreground="{x:Null}"
+                                Width="23"
+                                Height="23"
+                                Margin="10 0">
+
+                                        </Button>
+                                        <TextBlock
+                                Grid.Column="1"
+                                x:Name="tbQty"
+                                Background="Transparent"
+                                FontSize="23"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Margin="7 0"/>
+                                        <Button
+                                        x:Name="btnMin"
+                                        Grid.Column="2" 
+                                            VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        BorderBrush="{x:Null}" 
+                                        Foreground="{x:Null}"
+                                            Width="23"
+                                        Height="23"
+                                        Margin="10 0">
+
+                                        </Button>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>    
+            
+        </StackPanel>
 
         <StackPanel Orientation="Horizontal"
                     Grid.Column="1"
@@ -67,20 +167,6 @@
                     Background="#FFEED8C6"
                     Grid.RowSpan="4"
                     Grid.ColumnSpan="2">
-
-            <TextBlock
-                Text="▶ Выберите столик"
-                FontSize="20" 
-                FontFamily="Comic Sans MS"
-                Height="25"
-                Width="200"
-                Margin="70 0 0 55"
-                />
-
-            <ComboBox 
-                Height="45"
-                Width="220"
-                Margin="10 5 0 55"/>
 
             <Button 
                     x:Name="BackBtn"
@@ -90,7 +176,7 @@
                     Width="100"
                     Height="50"
                     Foreground="#FF557A95"
-                    Margin="-905 55 0 0" 
+                    Margin="0 0 0 0" 
                     BorderBrush="{x:Null}"
                     Background="{x:Null}"
                     FontWeight ="ExtraBold"
@@ -105,7 +191,7 @@
                     Width="160"
                     Height="50"
                     Foreground="#FF557A95"
-                    Margin="-80 55 0 0" 
+                    Margin="320 0 0 0" 
                     BorderBrush="{x:Null}"
                     Background="{x:Null}"
                     FontWeight ="ExtraBold"

@@ -102,7 +102,7 @@
 
             <Button 
                     x:Name="PayBtn"
-                    Content="Оплатить ▹"
+                    Content="Завершить ▹"
                     FontSize="15" 
                     FontFamily="Comic Sans MS"
                     Width="100"

@@ -7,8 +7,9 @@ using Tortuga_Bezrukov.EF;
 
 namespace Tortuga_Bezrukov.ClassHelper
 {
-    class Class1
+    class Backet1
     {
-        public static TortugaC context { get; set; } = new TortugaC();
+        public static List<Dish> dishes = new List<Dish>();
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.JScript;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Tortuga_Bezrukov.EF;
+using static Tortuga_Bezrukov.ClassHelper.Class1;
 
 namespace Tortuga_Bezrukov.Windows
 {
@@ -23,7 +25,7 @@ namespace Tortuga_Bezrukov.Windows
         public Salads()
         {
             InitializeComponent();
-            AllSalads.ItemsSource = ClassHelper.Class1.context.Salad.ToList();
+            AllSalads.ItemsSource = context.Dish.Where(i => i.IdCategory == 1).ToList();
         }
 
         private void BtnBakery_Click(object sender, RoutedEventArgs e)
