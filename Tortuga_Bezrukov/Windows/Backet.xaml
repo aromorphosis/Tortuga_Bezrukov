@@ -6,31 +6,31 @@
         xmlns:local="clr-namespace:Tortuga_Bezrukov.Windows"
         xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" x:Class="Tortuga_Bezrukov.Windows.Backet"
         mc:Ignorable="d"
-        Title="Корзина" Height="720" Width="720" WindowStartupLocation="CenterScreen">
+        Title="Корзина" Height="720" Width="1280" WindowStartupLocation="CenterScreen"  Background="#FFEED8C6">
+    <Window.Resources>
+        <Style x:Key="ImageCorner" TargetType="{x:Type Image}"/>
+    </Window.Resources>
     <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.1*"/>
             <RowDefinition Height="0.5*"/>
-            <RowDefinition Height="0.5*"/>
-            <RowDefinition Height="0.5*"/>
-            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.1*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.2*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
 
         <StackPanel Orientation="Horizontal"
-                    Grid.ColumnSpan="4" Background="#FF557A95">
+                    Grid.ColumnSpan="5" Background="#FF557A95">
 
             <Image Source="/Images/Штурвал.png"
                    Height="100"
                    Width="100"
-                   Margin="120 0 0 0"/>
+                   Margin="370 0 0 0"/>
 
             <TextBlock
                 Text="Tortuga"
@@ -43,161 +43,110 @@
         </StackPanel>
 
         <StackPanel Orientation="Vertical"
-                    Grid.Column="5"
+                    Grid.Column="2"
                     Grid.Row="1"
                     Background="#FF7395AE"
-                    Grid.RowSpan="5"/>
+                    Grid.RowSpan="2"/>
 
         <StackPanel Orientation="Vertical"
                     Grid.Column="0"
                     Grid.Row="1"
                     Background="#FF7395AE"
-                    Grid.RowSpan="5"/>
-
-        <StackPanel Orientation="Horizontal"
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    Background="#FFEED8C6"
-                    Grid.RowSpan="3"
-                    Grid.ColumnSpan="2">
-
-            <ListView Height="400" Width="550" Margin="23" 
-                      x:Name="lvOrder"
-                      Grid.Row="1"
-                      Background="Transparent">
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel/>
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Border
-                CornerRadius="20"
+                    Grid.RowSpan="2"/>
+        
+        <ListView  
+            Grid.Column="1"
+            Grid.Row="1"
+            x:Name="lvOrder"
+            Background="Transparent" 
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled" d:ItemsSource="{d:SampleData ItemCount=6}">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border
                 Height="50"
-                Width="100"
+                Width="800"
                 HorizontalAlignment="Center"
-                Margin="0 0"
-                Background="#FF7395AE" >
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="470"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="0.4*"/>
-                                </Grid.ColumnDefinitions>
-                                <Border
-                        Grid.Column="0"
-                        Background="#FFD3D2E2"
-                        CornerRadius="10"
-                        Margin="19 5">
-                                    <TextBlock
+                Margin="120 20"
+                Background="#FF7395AE" 
+                CornerRadius="10">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border
+                                    Grid.Column="0"
+                                    Background="#FFD3D2E2"
+                                    Margin="20 5"
+                                    CornerRadius="25">
+
+                            <TextBlock
                             x:Name="tbTitle"
-                            Text="Суп томатный средиземноморский с морепродуктами"
-                            FontSize="16"
-                            VerticalAlignment="Center"
-                            Margin="14 0"/>
-                                </Border>
-                                <TextBlock
-                       x:Name="tbCost" 
-                        Grid.Column="2"
-                        Text="1000₽"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Right"
-                        Margin="0 0 45 0"
-                        FontSize="24"/>
-                                <Border
-                        Grid.Column="1"
-                        Margin="20 5"
-                        CornerRadius="10"
-                        Background="#FFD3D2E2"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Right">
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="*"/>
-                                        </Grid.ColumnDefinitions>
+                            Text="{Binding Path = Title}"
+                            FontSize="15"
+                            Margin="20 8 0 0"/>
+                            </Border>
 
-                                        <Button
-                                x:Name="btnPlus"
-                                Grid.Column="0"
-                                 VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                BorderBrush="{x:Null}"
-                                Foreground="{x:Null}"
-                                Width="23"
-                                Height="23"
-                                Margin="10 0">
+                            <TextBlock
+                            x:Name="tbCost" 
+                            Grid.Column="1"
+                            Text="{Binding Path = Cost}"
+                            Margin="20 12 0 0"
+                            FontSize="15"/>
 
-                                        </Button>
-                                        <TextBlock
-                                Grid.Column="1"
-                                x:Name="tbQty"
-                                Background="Transparent"
-                                FontSize="23"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                Margin="7 0"/>
-                                        <Button
-                                        x:Name="btnMin"
-                                        Grid.Column="2" 
-                                            VerticalAlignment="Center"
-                                        HorizontalAlignment="Center"
-                                        BorderBrush="{x:Null}" 
-                                        Foreground="{x:Null}"
-                                            Width="23"
-                                        Height="23"
-                                        Margin="10 0">
-
-                                        </Button>
-                                    </Grid>
-                                </Border>
-                            </Grid>
-                        </Border>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>    
-            
-        </StackPanel>
+                            <Image Style="{DynamicResource ImageCorner}" Grid.Column="2"
+                                   Margin="5"
+                                   Source="{Binding Path = ImagePath}"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
         <StackPanel Orientation="Horizontal"
                     Grid.Column="1"
-                    Grid.Row="4"
+                    Grid.Row="2"
                     Background="#FFEED8C6"
-                    Grid.RowSpan="4"
-                    Grid.ColumnSpan="2">
+                    Grid.ColumnSpan="1">
 
             <Button 
                     x:Name="BackBtn"
                     Content="◃ Назад"
-                    FontSize="15" 
+                    FontSize="25" 
                     FontFamily="Comic Sans MS"
-                    Width="100"
+                    Width="120"
                     Height="50"
                     Foreground="#FF557A95"
-                    Margin="0 0 0 0" 
+                    Margin="10 0 0 0" 
                     BorderBrush="{x:Null}"
                     Background="{x:Null}"
                     FontWeight ="ExtraBold"
                     Click="BackBtn_Click"
                     />
-            
+
             <Button 
                     x:Name="PaymentBtn"
                     Content="Перейти к оплате ▹"
-                    FontSize="15" 
+                    FontSize="25" 
                     FontFamily="Comic Sans MS"
-                    Width="160"
+                    Width="270"
                     Height="50"
                     Foreground="#FF557A95"
-                    Margin="320 0 0 0" 
+                    Margin="670 0 0 0" 
                     BorderBrush="{x:Null}"
                     Background="{x:Null}"
                     FontWeight ="ExtraBold"
                     Click="PaymentBtn_Click"/>
 
         </StackPanel>
-        
+
     </Grid>
 </Window>

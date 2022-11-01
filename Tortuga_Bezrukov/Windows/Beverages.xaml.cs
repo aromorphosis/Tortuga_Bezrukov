@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Tortuga_Bezrukov.ClassHelper;
 using Tortuga_Bezrukov.EF;
 using static Tortuga_Bezrukov.ClassHelper.Class1;
 
@@ -58,6 +59,16 @@ namespace Tortuga_Bezrukov.Windows
             Backet backet = new Backet();
             backet.ShowDialog();
             this.Close();
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button == null)
+                return;
+            var dishes = button.DataContext as Dish;
+
+            Backet1.dishes.Add(dishes);
         }
     }
 }

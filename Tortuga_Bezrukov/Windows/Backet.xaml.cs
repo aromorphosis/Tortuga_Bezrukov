@@ -13,8 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Tortuga_Bezrukov.EF;
 using Tortuga_Bezrukov;
-using static Tortuga_Bezrukov.ClassHelper.Backet1;
 using Tortuga_Bezrukov.ClassHelper;
+using static Tortuga_Bezrukov.ClassHelper.Backet1;
+
 
 namespace Tortuga_Bezrukov.Windows
 {
@@ -27,7 +28,7 @@ namespace Tortuga_Bezrukov.Windows
         public Backet()
         {
             InitializeComponent();
-            lvOrder.SelectedItem = Backet1.dishes.ToList();
+            lvOrder.ItemsSource = Backet1.dishes.ToList();
         }
 
         private void PaymentBtn_Click(object sender, RoutedEventArgs e)

@@ -115,13 +115,13 @@
                     Grid.ColumnSpan="2">
 
             <ListView x:Name="AllSalads"
-                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                    ScrollViewer.VerticalScrollBarVisibility="Disabled"
                     BorderBrush="#FF557A95"
                     Background="#FFEED8C6"
                     Foreground="White"
                     Width="1000"
                     Height="530"
-                    Margin="30 0">
+                    Margin="30 0" d:ItemsSource="{d:SampleData ItemCount=5}">
 
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -135,7 +135,7 @@
                         BorderThickness="2"
                         CornerRadius="10"
                         Width="300"
-                        Height="150"
+                        Height="450"
                         Margin="10">
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -144,37 +144,43 @@
                                 </Grid.ColumnDefinitions>
 
                                 <Grid.RowDefinitions>
+                                    <RowDefinition Height="5*"/>
+                                    <RowDefinition Height="*"/>
                                     <RowDefinition Height="*"/>
                                     <RowDefinition Height="*"/>
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
 
+                                <Image Grid.Row="0"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        Height="200"
+                                        Width="200"
+                                        Source="{Binding Path = ImagePath}"/>
+
                                 <TextBlock Text="Название:"
                                         Grid.Column="0"
-                                        Grid.Row="0"
-                                        Width="300"
-                                        Height="150"
-                                        Margin="10 10 10 10"
+                                        Grid.Row="1"
+                                        Width="80"
+                                        Height="30"
                                         FontSize="15"
                                         Foreground="White" 
                                         FontFamily="Comic Sans MS"/>
 
                                 <TextBlock Text="Цена:"
                                        Grid.Column="0"
-                                       Grid.Row="1"
-                                       Width="300"
-                                       Height="150"
-                                       Margin="10 10 10 10"
+                                       Grid.Row="2"
+                                       Width="50"
+                                       Height="30"
                                        FontSize="15"
                                        Foreground="White"
                                        FontFamily="Comic Sans MS"/>
 
                                 <TextBlock Text="Калорийность:"
                                         Grid.Column="0"
-                                        Grid.Row="2"
-                                        Width="300"
-                                        Height="150"
-                                        Margin="10 10 10 10"
+                                        Grid.Row="3"
+                                        Width="110"
+                                        Height="30"
                                         FontSize="15"
                                         Foreground="White"
                                         FontFamily="Comic Sans MS"/>
@@ -182,27 +188,50 @@
 
                                 <TextBlock Text="{Binding Path = Title}"
                                         Grid.Column="1"
-                                        Grid.Row="0"
-                                        Margin="10 10 10 10"
+                                        Grid.Row="1"
                                         FontSize="15"
                                         Foreground="White"
+                                        Margin="8"
                                         FontFamily="Comic Sans MS"/>
 
                                 <TextBlock Text="{Binding Path = Cost}"
                                         Grid.Column="1"
-                                        Grid.Row="1"
-                                        Margin="10 10 10 10"
+                                        Grid.Row="2"
                                         FontSize="15"
                                         Foreground="White"
+                                        Margin="8"
                                         FontFamily="Comic Sans MS"/>
 
                                 <TextBlock Text="{Binding Path = Weight}"
                                         Grid.Column="1"
-                                        Grid.Row="2"
-                                        Margin="10 10 10 10"
+                                        Grid.Row="3"
                                         FontSize="15"
                                         Foreground="White"
+                                        Margin="8"
                                         FontFamily="Comic Sans MS"/>
+
+                                <Button
+                                x:Name="btnAdd"
+                                Grid.Column="0"
+                                Grid.Row="4"
+                                Grid.ColumnSpan="1"
+                                Content="Заказать"
+                                Margin="0 0 -50 0"
+                                Height="30"
+                                Width="100"    
+                                FontSize="10"
+                                Foreground="White"
+                                VerticalContentAlignment="Center"
+                                HorizontalAlignment="Right" Background="#FF557A95"
+                                Click="btnAdd_Click"
+                            >
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="15"/>
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
+
                             </Grid>
                         </Border>
                     </DataTemplate>

@@ -7,7 +7,7 @@ using Tortuga_Bezrukov.EF;
 
 namespace Tortuga_Bezrukov.ClassHelper
 {
-    class Backet1
+   internal class Backet1
     {
         public static List<Dish> dishes = new List<Dish>();
 
