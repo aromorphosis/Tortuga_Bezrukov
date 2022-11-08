@@ -25,10 +25,19 @@ namespace Tortuga_Bezrukov.Windows
     public partial class Backet : Window
     {
 
+        public static decimal FinalCost;
+      
+
         public Backet()
         {
             InitializeComponent();
-            lvOrder.ItemsSource = Backet1.dishes.ToList();
+            GetProductList();
+            TBCosts.Text = FinalCost.ToString();
+        }
+
+        private void GetProductList()
+        {
+            lvOrder.ItemsSource = ClassHelper.Backet1.dishes;
         }
 
         private void PaymentBtn_Click(object sender, RoutedEventArgs e)

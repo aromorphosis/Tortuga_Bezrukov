@@ -71,6 +71,8 @@
     </ApplicationDefinition>
     <Compile Include="ClassHelper\Backet1.cs" />
     <Compile Include="ClassHelper\Class1.cs" />
+    <Compile Include="ClassHelper\CostDiscount.cs" />
+    <Compile Include="ClassHelper\DishShopcs.cs" />
     <Compile Include="EF\Booking.cs">
       <DependentUpon>TortugaBD.tt</DependentUpon>
     </Compile>
@@ -119,14 +121,11 @@
     <Compile Include="Windows\Backet.xaml.cs">
       <DependentUpon>Backet.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ColdDishes.xaml.cs">
-      <DependentUpon>ColdDishes.xaml</DependentUpon>
+    <Compile Include="Windows\Tables.xaml.cs">
+      <DependentUpon>Tables.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Dishes.xaml.cs">
       <DependentUpon>Dishes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\HotDishes.xaml.cs">
-      <DependentUpon>HotDishes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Payment.xaml.cs">
       <DependentUpon>Payment.xaml</DependentUpon>
@@ -146,15 +145,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\ColdDishes.xaml">
+    <Page Include="Windows\Tables.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Dishes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\HotDishes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -219,9 +214,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resourcers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\Корзина.png" />
     <Resource Include="Images\Стрелочка.png" />
@@ -246,6 +239,14 @@
       <DependentUpon>TortugaBD.edmx</DependentUpon>
       <LastGenOutput>TortugaBD.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\Стул 2.png" />
+    <Resource Include="Images\Диван.png" />
+    <Resource Include="Images\Кресло.png" />
+    <Resource Include="Images\Растение.png" />
+    <Resource Include="Images\Стол 1.png" />
+    <Resource Include="Images\Стол 2.png" />
+    <Resource Include="Images\Стол 3.png" />
+    <Resource Include="Images\Стул 1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

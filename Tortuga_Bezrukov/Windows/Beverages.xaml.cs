@@ -63,11 +63,24 @@ namespace Tortuga_Bezrukov.Windows
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            var button = sender as Button;
-            if (button == null)
-                return;
-            var dishes = button.DataContext as Dish;
+            var btnAddToCart = sender as Button;
 
+            if (btnAddToCart == null)
+                return;
+            var dishes = btnAddToCart.DataContext as Dish;
+
+            if (dishes == null)
+                return;
+
+            foreach (var item in Backet1.dishes)
+            {
+                if (item == dishes)
+                {
+                    item.Qty++;
+                    Backet.FinalCost += dishes.Cost;
+                    return;
+                }
+            }
             Backet1.dishes.Add(dishes);
         }
     }

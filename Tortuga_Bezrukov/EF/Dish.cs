@@ -27,6 +27,8 @@ namespace Tortuga_Bezrukov.EF
         public string Description { get; set; }
         public int IdCategory { get; set; }
         public string ImagePath { get; set; }
+
+        public int Qty { get; set; }
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
