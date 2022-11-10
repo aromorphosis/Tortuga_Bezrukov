@@ -62,6 +62,14 @@
                     Grid.RowSpan="3"
                     Grid.ColumnSpan="2">
 
+            <TextBlock
+                Text="▶ Выберите способ оплаты:"
+                FontSize="25" 
+                FontFamily="Comic Sans MS"
+                Height="35"
+                Width="350"
+                Margin="20 0 0 400"/>
+            
         </StackPanel>
 
         <StackPanel Orientation="Horizontal"
@@ -71,29 +79,15 @@
                     Grid.RowSpan="4"
                     Grid.ColumnSpan="2">
 
-            <TextBlock
-                Text="▶ Выберите способ оплаты"
-                FontSize="20" 
-                FontFamily="Comic Sans MS"
-                Height="25"
-                Width="280"
-                Margin="30 0 0 55"
-                />
-
-            <ComboBox 
-                Height="45"
-                Width="220"
-                Margin="10 5 0 55"/>
-
             <Button 
                     x:Name="BackBtn"
                     Content="◃ Назад"
-                    FontSize="15" 
+                    FontSize="25" 
                     FontFamily="Comic Sans MS"
-                    Width="100"
+                    Width="140"
                     Height="50"
                     Foreground="#FF557A95"
-                    Margin="-925 55 0 0" 
+                    Margin="0 0 0 0" 
                     BorderBrush="{x:Null}"
                     Background="{x:Null}"
                     FontWeight ="ExtraBold"
@@ -103,12 +97,12 @@
             <Button 
                     x:Name="PayBtn"
                     Content="Завершить ▹"
-                    FontSize="15" 
+                    FontSize="25" 
                     FontFamily="Comic Sans MS"
-                    Width="100"
+                    Width="170"
                     Height="50"
                     Foreground="#FF557A95"
-                    Margin="-65 55 0 0" 
+                    Margin="280 0 0 0" 
                     BorderBrush="{x:Null}"
                     Background="{x:Null}"
                     FontWeight ="ExtraBold"
