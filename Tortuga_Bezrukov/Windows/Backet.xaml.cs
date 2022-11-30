@@ -32,7 +32,9 @@ namespace Tortuga_Bezrukov.Windows
         {
             InitializeComponent();
             GetProductList();
-            TBCosts.Text = FinalCost.ToString();
+            DateTime date = DateTime.Now;
+          //DateTime date = new DateTime(2022, 10, 29);
+            TBCosts.Text = ClassHelper.CostDisc.Sum(date,Backet.FinalCost).ToString();
         }
 
         private void GetProductList()

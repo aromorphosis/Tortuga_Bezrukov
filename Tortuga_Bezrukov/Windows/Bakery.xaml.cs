@@ -78,6 +78,7 @@ namespace Tortuga_Bezrukov.Windows
                 if (item == dishes)
                 {
                     item.Qty++;
+
                     Backet.FinalCost += dishes.Cost;
                     return;
                 }
