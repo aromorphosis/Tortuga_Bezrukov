@@ -239,6 +239,9 @@
       <DependentUpon>TortugaBD.edmx</DependentUpon>
       <LastGenOutput>TortugaBD.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\Оплата картой.png" />
+    <Resource Include="Images\Оплата наличными.png" />
+    <Resource Include="Images\Мусорная_Корзина.png" />
     <Resource Include="Images\Стул 2.png" />
     <Resource Include="Images\Диван.png" />
     <Resource Include="Images\Кресло.png" />

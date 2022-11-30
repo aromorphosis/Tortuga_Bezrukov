@@ -7,9 +7,6 @@
         xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" x:Class="Tortuga_Bezrukov.Windows.Backet"
         mc:Ignorable="d"
         Title="Корзина" Height="720" Width="1280" WindowStartupLocation="CenterScreen"  Background="#FFEED8C6">
-    <Window.Resources>
-        <Style x:Key="ImageCorner" TargetType="{x:Type Image}"/>
-    </Window.Resources>
     <Grid>
 
         <Grid.RowDefinitions>
@@ -81,6 +78,7 @@
                                 <ColumnDefinition Width="0.5*"/>
                                 <ColumnDefinition Width="0.5*"/>
                                 <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="0.5*"/>
                             </Grid.ColumnDefinitions>
 
                             <Border
@@ -88,7 +86,7 @@
                                     Background="#FFD3D2E2"
                                     Margin="20 5"
                                     CornerRadius="25"
-                                    Width="500" 
+                                    Width="493" 
                                     HorizontalAlignment="Left">
 
                             <TextBlock
@@ -98,26 +96,37 @@
                             Margin="20 8 0 0"/>
                             </Border>
 
+                            <Button x:Name="ButtonDelete"
+                                    Grid.Column="1"
+                                    BorderBrush="{x:Null}"
+                                    Background="{x:Null}"
+                                    Margin="5"
+                                    Click="ButtonDelete_Click">
+                                <Image Source="/Images/Мусорная_Корзина.png"
+                                       />
+                            </Button>
+                            
                             <TextBlock
                             x:Name="tbCost" 
-                            Grid.Column="1"
+                            Grid.Column="2"
                             Text="{Binding Path = Cost}"
-                            Margin="20 12 0 0"
+                            Margin="10 15 0 0"
                             FontSize="15"/>
 
-                            <Image Style="{DynamicResource ImageCorner}" Grid.Column="2"
+                            <Image Grid.Column="3"
                                    Margin="5"
                                    Source="{Binding Path = ImagePath}"/>
 
-                            <TextBox Text="{Binding Path=Qty}"
+                            <TextBlock Text="{Binding Path=Qty}"
                                      x:Name="TBQty"
                                      Grid.Column="4"
                                      Height="20"
                                      Width="20"
-                                     VerticalContentAlignment="Center"
-                                     HorizontalContentAlignment="Center"
+                                     Margin="-10 0 0 0"
+                                     FontSize="15"
                                      Background="Transparent"
-                                     Foreground="Black"/>
+                                     Foreground="Black"
+                                     />
 
                         </Grid>
                     </Border>
@@ -153,16 +162,10 @@
                        Foreground="#FF557A95"
                        FontWeight ="ExtraBold"/>
 
-            <TextBox x:Name="TBCosts"
-                     Height="50"
-                     Width="100"
-                     Margin="10 10 0 0" 
-                     HorizontalContentAlignment="Center"
-                     VerticalContentAlignment="Center"
-                     BorderBrush="{x:Null}"
+            <TextBlock x:Name="TBCosts"
+                     Margin="10 38 0 0" 
                      FontFamily="Comic Sans MS"
                      Foreground="#FF557A95"
-                     Background="{x:Null}"
                      FontSize="25"
                      />
 

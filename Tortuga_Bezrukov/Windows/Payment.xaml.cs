@@ -31,6 +31,24 @@ namespace Tortuga_Bezrukov.Windows
             backet.ShowDialog();
             this.Close();
         }
+
+        private void PayNal_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Заказ оформлен");
+            this.Hide();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.ShowDialog();
+            this.Close();
+        }
+
+        private void PayCard_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Заказ оформлен");
+            this.Hide();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.ShowDialog();
+            this.Close();
+        }
     }
     
 }

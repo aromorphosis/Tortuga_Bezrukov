@@ -56,5 +56,9 @@ namespace Tortuga_Bezrukov.Windows
             this.Close();
         }
 
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

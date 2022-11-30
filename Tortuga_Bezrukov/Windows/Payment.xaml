@@ -55,7 +55,7 @@
                     Grid.RowSpan="5">
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal"
+        <StackPanel Orientation="Vertical"
                     Grid.Column="1"
                     Grid.Row="1"
                     Background="#FFEED8C6"
@@ -68,8 +68,48 @@
                 FontFamily="Comic Sans MS"
                 Height="35"
                 Width="350"
-                Margin="20 0 0 400"/>
-            
+                Margin="20 20 0 400"/>
+
+            <Image Source="/Images/Оплата наличными.png"
+                   Height="250"
+                   Width="250"
+                   Margin="0 -470 300 0"/>
+
+            <Image Source="/Images/Оплата картой.png"
+                   Height="200"
+                   Width="200"
+                   Margin="300 -500 0 0"/>
+
+            <Button 
+                    x:Name="PayNal"
+                    Content="Оплата наличными ▹"
+                    FontSize="25" 
+                    FontFamily="Comic Sans MS"
+                    Width="300"
+                    Height="50"
+                    Foreground="#FF557A95"
+                    Margin="0 -150 280 0" 
+                    BorderBrush="{x:Null}"
+                    Background="{x:Null}"
+                    FontWeight ="ExtraBold"
+                    Click="PayNal_Click"
+                    />
+
+            <Button 
+                    x:Name="PayCard"
+                    Content="Оплата картой ▹"
+                    FontSize="25" 
+                    FontFamily="Comic Sans MS"
+                    Width="300"
+                    Height="50"
+                    Foreground="#FF557A95"
+                    Margin="330 -150 0 0" 
+                    BorderBrush="{x:Null}"
+                    Background="{x:Null}"
+                    FontWeight ="ExtraBold"
+                    Click="PayCard_Click"
+                    />
+
         </StackPanel>
 
         <StackPanel Orientation="Horizontal"
@@ -93,21 +133,6 @@
                     FontWeight ="ExtraBold"
                     Click="BackBtn_Click"
                     />
-
-            <Button 
-                    x:Name="PayBtn"
-                    Content="Завершить ▹"
-                    FontSize="25" 
-                    FontFamily="Comic Sans MS"
-                    Width="170"
-                    Height="50"
-                    Foreground="#FF557A95"
-                    Margin="280 0 0 0" 
-                    BorderBrush="{x:Null}"
-                    Background="{x:Null}"
-                    FontWeight ="ExtraBold"
-                    />
-
         </StackPanel>
 
     </Grid>

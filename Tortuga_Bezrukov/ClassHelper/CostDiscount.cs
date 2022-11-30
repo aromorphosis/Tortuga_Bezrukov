@@ -7,5 +7,5 @@ using Tortuga_Bezrukov.Windows;
 
 namespace Tortuga_Bezrukov.ClassHelper
 {
-   
+        
 }
