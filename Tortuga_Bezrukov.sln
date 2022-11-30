@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31702.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tortuga_Bezrukov", "Tortuga_Bezrukov\Tortuga_Bezrukov.csproj", "{617CD276-B051-48FC-B637-31148B1ADB9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{B335C868-957A-4CE1-B487-2F35A69CF233}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{617CD276-B051-48FC-B637-31148B1ADB9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{617CD276-B051-48FC-B637-31148B1ADB9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{617CD276-B051-48FC-B637-31148B1ADB9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B335C868-957A-4CE1-B487-2F35A69CF233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B335C868-957A-4CE1-B487-2F35A69CF233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B335C868-957A-4CE1-B487-2F35A69CF233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B335C868-957A-4CE1-B487-2F35A69CF233}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
